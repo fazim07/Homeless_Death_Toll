@@ -17,7 +17,7 @@ library(tibble)
 #Seed for reproducibility
 set.seed(365)
 
-# load all months into a varible for easy coding 
+# Load all months into a variable for easy coding 
 months <- c("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")
  
 simulated_data <- tibble(
