@@ -1,3 +1,11 @@
+#### Preamble ####
+# Purpose: Data clean up and data sort, save files
+# Author: Faiza Imam
+# Date: January 22nd 20224
+# Contact: faiza.imam@mail.utoronto.ca
+# License: MIT
+# Pre-requisites: 01-download_data.R
+
 #### Workspace setup ####
 library(tidyverse)
 library(janitor)
