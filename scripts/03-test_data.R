@@ -4,7 +4,7 @@
 # Email: faiza.imam@mail.utoronto.ca
 # Date: January 22nd 2024
 # Prerequisites: 00-simulate_data.R, 01-download_data.R, 02-data_cleaning.R
----
+--- 
 ```{r}
 #Code Reference: https://tellingstorieswithdata.com/02-drinking_from_a_fire_hose.html
 
