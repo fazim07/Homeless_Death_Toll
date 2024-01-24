@@ -2,7 +2,7 @@
 
 ## Overview
 
-summary of paper
+Toronto’s homeless crisis has been a persistent issue for years. Toronto Public Health began recording and collecting data on the death tolls among this population back in 2017. Using the data acquired from OpenData Toronto, this paper investigates the relationship between the time of year and its impact on the death toll of the homeless population and the findings suggest that the time of year does not influence the death toll.
 
 
 ## File Structure
