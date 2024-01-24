@@ -80,9 +80,6 @@ Copy code
 data$numeric_variable <- as.numeric(data$character_variable)
 Remember to adapt these steps based on the specific nature of your dataset and the characteristics of the unknown variables you're dealing with.
 
----
-Date: Jan 20th 2024
-
 User:
 How to order months in R
 
