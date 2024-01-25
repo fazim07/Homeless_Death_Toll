@@ -105,3 +105,36 @@ This code creates a sample dataset with a 'month' column, specifies the order of
 
 Adjust the code according to your specific dataset and requirements. If you have a different scenario in mind, please provide more details so I can assist you more accurately.
 
+---
+January 25th 2024
+
+User:
+I want to make this code chunk into a lined graph:
+
+data_clean_no_NA %>%
+  ggplot(aes(x = month_of_death, y = death_tolls, fill = factor(year_of_death))) +
+  geom_line(stat = "identity", position = "dodge", alpha = 2) +
+  labs(title = "Total Death Toll by Month and Year", x = "Month", y = "Total Deaths", fill = "Year") 
+  theme_minimal() + theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+ChatGPT
+Certainly! It looks like you're using ggplot2 in R to create a line graph. However, the geom_line with position = "dodge" is not appropriate for a line graph. Instead, you should use geom_line without position = "dodge".
+
+Here's the corrected code for creating a line graph of death toll trends by month, grouped by year:
+
+R
+Copy code
+# Graph the death toll trend by month grouped by year
+data_clean_no_NA %>%
+  ggplot(aes(x = month_of_death, y = death_tolls, color = factor(year_of_death))) +
+  geom_line() +
+  labs(title = "Total Death Toll by Month and Year", x = "Month", y = "Total Deaths", color = "Year") +
+  theme_minimal() + 
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+Changes made:
+
+Replaced fill with color in aes to better represent a line graph with different colors for each year.
+Removed position = "dodge" from geom_line since it's not applicable for a line graph.
+Adjusted the legend label to "Year" to match the color aesthetic.
+This should create a line graph showing the death toll trend by month, with each line representing a different year.
+
