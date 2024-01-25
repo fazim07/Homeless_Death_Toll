@@ -1,5 +1,5 @@
 #### Preamble ####
-# Purpose: Stimulate data on the death tolls of the homeless population (2017-2023)
+# Purpose: Stimulate data regarding the homeless population in Toronto from years 2017 - 2023
 # Author: Faiza Imam
 # Email: faiza.imam@mail.utoronto.ca
 # Date: January 22nd 2024
