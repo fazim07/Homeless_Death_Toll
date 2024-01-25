@@ -1,10 +1,10 @@
 ---
 title: "Does the Time of Year Affect Death Tolls Among the Homeless Population? An Analysis of Deaths of People Experiencing Homelessness"
 author: "Faiza Imam"
-thanks: "Code and data from this analysis are availble at: https://github.com/fazim07/Homeless_Death_Toll "
+thanks: "Code and data from this analysis are available at: https://github.com/fazim07/Homeless_Death_Toll "
 date: today
 date-format: long
-abstract: "Toronto’s homeless crisis has been a persistent issue for years which prommpted Toronto Public Health to bgein collecting data on the death tolls among this population back in 2017. Using the data acquired from OpenData Toronto, this paper investigated the relationship between the time of year and its impact on the death toll of the homeless population and the findings suggest that there is no correlation."
+abstract: "Toronto’s homeless crisis has been a persistent issue for years which prompted Toronto Public Health to begin collecting data on the death tolls among this population back in 2017. Using the data acquired from Open Data Toronto, this paper investigated the relationship between the time of year and its impact on the death toll of the homeless population and the findings suggest that there is no correlation."
 format: pdf
 toc: true
 number-sections: true
@@ -39,12 +39,14 @@ library(janitor)
 
 # Introduction
 
-Toronto's homeless crisis has been an ongoing issue for the city, in recent years the number of people facing homelessness increased significantly. It is estimated that over 10,000 people in the city are homeless on any given night (@Odata) Over 10,000 people in the city are homeless on any given night (@FV) For the course of this paper, the term ‘homelessness’ is described as a situation of an individual or family without stable or permanent housing or any mean of acquiring housing. (@Odata).  This is a result of systemic barriers such as the lack of affordable and appropriate housing, and the financial, mental, cognitive, behavioural, racial or physical challenges faced by the individual or individuals (@Haven). It is important to note that people do not choose to become homeless and the experience of being homeless is unpleasant, unsafe, stressful and distressing for those who are facing this challenge currently (@Odata). In 2017, TPH (Toronto Public Health) began collecting data regarding the deaths within the population facing homelessness. The intention was and still is to understand the trends, gain an accurate estimation of the demographics affected and understand the cause of these deaths. 
+Toronto's homeless crisis has been an ongoing issue for the city, in recent years the number of people facing homelessness increased significantly. It is estimated that over 10,000 people in the city are homeless on any given night (@Odata). For the course of this paper, the term ‘homelessness’ is described as a situation of an individual or family without stable or permanent housing or any means of acquiring housing. (@Odata).  This is a result of systemic barriers such as the lack of affordable and appropriate housing, and the financial, mental, cognitive, behavioural, racial or physical challenges faced by the individual or individuals (@Haven). It is important to note that people do not choose to become homeless and the experience of being homeless is unpleasant, unsafe, stressful and distressing for those who are facing this challenge currently (@FV). In 2017, TPH (Toronto Public Health) began collecting data regarding the deaths within the population facing homelessness. The intention was and still is to understand the trends, gain an accurate estimation of the demographics affected and understand the cause of these deaths. 
 
-A study conducted on Poland’s homeless population found that homeless people are more susceptible to higher mortality rates due to prolonged exposure to environmental conditions. (@Polstud). Atmospheric conditions such as weather, freezing temperatures and heat waves can cause an increased moraritly rate among this population (@Polstud). The result of the study found that Poland’s homeless population are more at risk of cold-weather-related deaths than those in the heat. Another report from the University of Chicago saw an overwhelming number of recorded deaths among the homeless population in 2022 due to harsh weather conditions. Shelters in the city of Chicago were at maximum capacity and had to turn away individuals (@wsws) Particularly in the winter season, shelters will not open their doors unless the temperature drops below -30 degrees.
-Similarly, in Toronto, shelters in the GTA will not open doors until the temperatures reach below -30 degrees and colder (@CTV).  There has been little research and data on Toronto’s homeless population regarding whether the time of the year has an impact on the death toll. This paper looks to analyze that same question to find a trend or pattern to contribute to research.
+A study conducted on Poland’s homeless population found that homeless people are more susceptible to higher mortality rates due to prolonged exposure to environmental conditions. (@Polstud). Atmospheric conditions such as weather, freezing temperatures and heat waves can cause an increased mortality rate among this population (@Polstud). The result of the study found that Poland’s homeless population is more at risk of cold-weather-related deaths than those in the heat. Another report from the University of Chicago saw an overwhelming number of recorded deaths among the homeless population in 2022 due to harsh weather conditions. Shelters in the city of Chicago were at maximum capacity and had to turn away individuals (@wsws). Particularly in the winter season, shelters will not open their doors unless the temperature drops below -30 degrees (@wsws).
+Similarly, in Toronto, shelters in the GTA will not open doors until the temperatures reach below -30 degrees and colder (@CTV). There has been little research and data on Toronto’s homeless population regarding whether the time of the year has an impact on the death toll. This paper looks to analyze that same question to find a trend or pattern to contribute to research.
 
-This paper is divided into the following sections: Data, Results, Discussion and Conclusion. Each section is written to reflect and analyze the data obtained and collected from Open-DataToronto. In the Data section, I discuss the data set acquired and the initial implications before my plan to analyze using the programming language R. The Result section discusses the trends and patterns observed in the data, followed by the Discussion section, which further evaluates the observations made in the previous sections. Lastly, the Conclusion summarizes the paper and future steps to take regarding this topic of interest
+The purpose of this paper is to identify and analyze the collective monthly death tolls of the homeless population in Toronto from 2017 to 2023 to find a common pattern to understand whether the time of year (month) affects the death tolls of the homeless population. To examine the patterns and their implications, a graphical analysis was conducted to visualize the data collected from the past seven years. Findings suggest that there is no relation between the time of month and death tolls among the homeless population.
+
+This paper is divided into the following sections: Data, Results, Discussion and Conclusion. Each section is written to reflect and analyze the data obtained and collected from Open Data Toronto. In the Data section, I discuss the data set acquired and the reason for conducting an analysis using the programming language R. The Result section discusses the trends and patterns observed in the data, followed by the Discussion section, which further evaluates the observations made in the previous sections. Lastly, the Conclusion summarizes the paper and future steps to take regarding this topic of interest.
 
 
 ```{r}
@@ -200,7 +202,7 @@ data_clean_no_NA %>%
   theme_minimal()
 ```
 ### Collective Monthly Death Tolls
-The collective monthly death tolls show a gradual fluctuation in total calculated death tools from all the years. January and May marked the highest death toll records with 106 and 102 respectively. @fig-monthly-bar  , displays the collective monthly death tolls.
+The collective monthly death tolls show a gradual fluctuation in total calculated death tools from all the years. January and May marked the highest death toll records with 106 and 102 respectively. @fig-monthly-bar, displays the collective monthly death tolls.
 
 ```{r}
 #| label: fig-monthly-bar
@@ -212,31 +214,32 @@ The collective monthly death tolls show a gradual fluctuation in total calculate
   #Code refernce: http://www.sthda.com/english/wiki/ggplot2-barplots-quick-start-guide-r-software-and-data-visualization
   geom_bar(stat = "identity", fill = "grey") +
   labs(title = "Total Death Toll Per Month (Collective)", x = "Month", y = "Total Deaths") +
+   
   ###Code Reference:https://stackoverflow.com/questions/1330989/rotating-and-spacing-axis-labels-in-ggplot2
    #Code ref2: https://www.r-bloggers.com/2021/09/how-to-rotate-axis-labels-in-ggplot2/
   theme_minimal() + theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
 
-### Monthly and Yearly Breakdown of Death Tolls.
-@fig-3, displays the monthly death tolls grouped by year. The months of January and May once again have high recorded death tolls throughout the years. However, in 2021, the months of August to November have higher death tolls compared to the previous year's records. 
+### Monthly and Yearly Breakdown of Death Tolls
+@fig-3, displays the monthly death tolls grouped by year. The months of January and May once again have high recorded death tolls throughout the years, with a mean death toll of 17 each year compared to the other months, averaging about 12.5 death tolls. However, in 2021, the months of August to November have higher death tolls compared to the previous year's records. 
 ```{r}
 #| label: fig-3
-#| fig-cap: Monthly Death Tolls on a Yearly basis
+#| fig-cap: Monthly Death Tolls Every Year
 #| echo: false
-#| 
+
 #Code reference: https://tellingstorieswithdata.com/02-drinking_from_a_fire_hose.html
 #code ref 2: https://stackoverflow.com/questions/42995155/r-bar-plot-with-3-variables
 
 #Graph the death toll trend by month grouped by year
+#Code ref: https://r-graph-gallery.com/line-chart-several-groups-ggplot2.html
+#ChatGPT helped with this chunk (receipts found in usage.text)
 data_clean_no_NA %>%
-  ggplot(aes(x = month_of_death, y = death_tolls, fill = factor(year_of_death))) +
-  geom_bar(stat = "identity", position = "dodge", alpha = 2) +
-  labs(title = "Total Death Toll by Month and Year", x = "Month", y = "Total Deaths", fill = "Year") +
-  
-  #Code Reference:https://stackoverflow.com/questions/1330989/rotating-and-spacing-axis-labels-in-ggplot2
-  #Code ref2:https://stackoverflow.com/questions/42995155/r-bar-plot-with-3-variables
-  
-  theme_minimal() + theme(axis.text.x = element_text(angle = 45, hjust = 1))
+  ggplot(aes(x = month_of_death, y = death_tolls, color = factor(year_of_death), group = factor(year_of_death))) +
+  geom_line(alpha = 0.8) +
+  labs(title = "Total Death Toll by Month and Year", x = "Month", y = "Total Deaths", color = "Year") +
+  theme_minimal() + 
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
 
 ```
 
@@ -244,14 +247,18 @@ data_clean_no_NA %>%
 
 Based on the results, it is revealed that there is no correlation between the time of the years (months) and their effects on death tolls. As projected in @fig-3, there is no seasonal or weather-related trend to suggest that there is an impact on death tolls within the homeless population based on the time of the year. In @fig-monthly-bar, the collective monthly death dolls showed that January and May had the highest death tolls recorded throughout the years, however, when comparing that to @fig-3, there is no trend to show the specific patterns present in all the years to establish a trend.  
 
-The data set used for analysis may have potential errors which may have affected the overall results. One of the errors may have been from my conclusion to omit “NA” variables. In the month's column of the set, there were a few “NA” entries and I decided to omit them during the cleanup process to avoid any outliers. The data set recorded began in 2017, effects of COVID-19 may be a vital player in the data collected as the pandemic may have limited the degree of data collection as we see @fig-yearly-bar, where this is increased in death tolls in 2021 in comparision to previous years.
+The data set used for analysis may have potential errors which may have affected the overall results. One of the errors may have been from my conclusion to omit “NA” variables. In the month's column of the set, there were a few “NA” entries and I decided to omit them during the cleanup process to avoid any outliers. 
 
-Moreover in @fig-3, there is an increase in recorded death tolls in 2021 which was during the peak of the pandemic. This may have affected the data as there had been an increase in recorded death tolls spanning from August to November 2021. This external factor may have masked any potential seasonal or weather-related trends. However, is it important to highlight that the death tolls reported for this specific data set may not reflect the true numbers as there may be more homeless death tolls that have not been accounted for. This requires improved data collection methods and a holistic plan to navigate existing and potential factors regarding death tolls among the homeless populations. 
+It is important to remember that the data collection for this particular set began in early 2017, pre-pandemic. As the pandemic hit, social distancing and lockdowns were enforced, making any sort of social interaction difficult and tedious. As a result, the effects of COVID-19 may have played a vital role in the data collection process as there may have been more deaths than accounted for. As we see in @fig-yearly-bar, there is a jump in the death toll in 2021 in comparison to previous years. The number may not accurately represent the true number of death tolls in 2021.
+
+Similarly, in @fig-3, there is an increase in recorded death tolls in 2021, contributing to the overall yearly increase, which was recorded during the peak of the pandemic. This may have affected the data as there had been an increase in recorded death tolls spanning from August to November 2021. This external factor may have masked any potential seasonal or weather-related trends. However, it is important to highlight that the death tolls reported for this specific data set may not reflect the true numbers, as there may be more homeless deaths that have not been accounted for. This requires improved data collection methods and a holistic plan to navigate existing and potential factors regarding death tolls among the homeless populations.
 
 Future studies should aim to look at the cause of death among the homeless population and their effects on seasonal/weather-based death trends. To understand the broader implications of the homeless population death trends. This also includes looking at the demographics affected, the socioeconomic implications and the ages of these people. These studies can aid the city in understanding how to tackle the homeless crisis and how to allocate resources to support those who are facing homelessness.
 
 # Conclusion
-This paper investigated the connection between the time of year (months) and the effects on the death toll of homeless people from the recorded death tolls from the years 2017-2023. My results reveal that there is no correlation between the time of year and its impact on death tolls among the homeless population. Variables such as cause of death, situational implications, shelter capacity and records, location within the GTA, and gender implications should be analyzed and studied to further understand the trends of homeless death tolls in Toronto. The data collection of records from 2024, projected to be released near the end of the fourth quarter (@Odata), may reveal further information and implications regarding the death toll trends among the homeless population. As mentioned previously in the paper, homelessness is not a choice one makes but rather falls victim due to complex interconnected factors, often beyond the individual's control. Toronto’s homelessness crisis is an ongoing issue that requires a multifaceted and comprehensive approach to find an impactful and sustainable solution data analyzed such as this paper, can aid in finding patterns to find a solution.
+This paper aimed to investigate the connection between the time of year (months) and its effects on the death toll of homeless people using recorded data for homeless death tolls in Toronto from the years 2017-2023. My results reveal that there is no correlation between the time of year and its impact on death tolls among the homeless population. Variables such as cause of death, situational implications, shelter capacity and records, location within the GTA, and gender implications should be analyzed and studied to further understand the trends of homeless death tolls in Toronto and to pinpoint any underlying factors.
+
+The next data collection for 2024 is projected to be released near the end of the fourth quarter (@Odata). This new information may reveal additional information and implications regarding the death toll trends among the homeless population. As mentioned previously in the paper, homelessness is not a choice one makes but rather a situation in which individuals fall victim due to complex interconnected factors, often beyond their control. The municipal government must take action against the homelessness crisis as it is an ongoing issue that requires a multifaceted and comprehensive approach to finding an impactful and sustainable solution. Data analyzed in papers like this can aid in identifying patterns to contribute to finding a possible solution.
 
 \newpage
 # References
