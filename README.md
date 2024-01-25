@@ -18,4 +18,4 @@ The repo is structured as:
 - Run `scripts/01-data_cleaning.R` to generate clean data sets
 - Run `outputs/paper.qmd` to obtain paper and access to PDF version.
 
-**Statement on LLM usage: Some aspects of the code, particularly in the data clean script (02-data_cleaning.R) were written with the help of ChatGPT. The receipts are available in inputs/llms/usage.txt.**
+**Statement on LLM usage: Some aspects of the code, particularly in the data clean script (02-data_cleaning.R) and qmd file were written with the help of ChatGPT. The receipts are available in inputs/llms/usage.txt.**
