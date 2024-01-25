@@ -18,7 +18,6 @@ library(reprex)
 library(styler)
 library(tictoc)
 library(tidyverse)
-library(tinytex)
 library(usethis)
 
 library(opendatatoronto)
@@ -26,7 +25,6 @@ library(janitor)
 ```
 
 ```{r}
-#| echo: false
 
 #Code Reference: https://github.com/InessaDeAngelis/Toronto_Elections/blob/main/scripts/01-download_data.R
 
