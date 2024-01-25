@@ -1,5 +1,5 @@
 #### Preamble ####
-# Purpose: Download, save, and write data set from Open Data
+# Purpose: Download, save, and write data set obtained from Open Data Toronto
 # Author: Faiza Imam
 # Date: January 22nd 20224
 # Contact: faiza.imam@mail.utoronto.ca
