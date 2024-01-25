@@ -1,5 +1,5 @@
 #### Preamble ####
-# Purpose: Data clean up and data sort, save files
+# Purpose: Data clean up and data sort, save files. Getting rid of ID column, and fixing up the names (basic clean up)
 # Author: Faiza Imam
 # Date: January 22nd 20224
 # Contact: faiza.imam@mail.utoronto.ca
@@ -10,6 +10,7 @@
 library(tidyverse)
 library(janitor)
 library(dplyr)
+library(readr)
 
 
 readr::read_csv("raw_data_collect.csv")
